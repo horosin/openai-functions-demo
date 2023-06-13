@@ -26,3 +26,4 @@ For more information on function calling in OpenAI's API, refer to [this OpenAI 
 
 This project was created by [@horosin_](https://twitter.com/horosin_).
 
+Author's blog [https://horosin.com](https://horosin.com).
