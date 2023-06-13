@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OpenAI Chat</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .chat-window {
+            height: 500px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            max-width: 600px;
+            width: 100%;
+            /* Define a width for the chat window */
+            word-wrap: break-word;
+            /* Enable word wrapping */
+        }
+
+        .message {
+            margin-bottom: 10px;
+            word-break: break-all;
+            /* This can be used to break very long words that could extend beyond the chat window */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>OpenAI Function Calling Demo</h1>
+        <p>
+            A demo of functionalities outlined here <br>
+            <a href="https://openai.com/blog/function-calling-and-other-api-updates"
+                target="_blank">https://openai.com/blog/function-calling-and-other-api-updates</a><br>
+
+            Ask GPT what the weather is like in some city.
+        </p>
+        <p>
+            Please be cautious with your API key!<br>
+            Source code for this app is available on <a href="https://github.com/horosin"
+                target="_blank">GitHub</a>.<br>
+            We're using gpt-3.5-turbo-0613 model.
+        </p>
+        <p>Demo uses mock weather API and always returns the same!</p>
+        <label for="apiKey" class="h2">OpenAI API Key</label>
+        <form>
+            <input type="password" id="apiKey" class="form-control" placeholder="OpenAI API Key" autocomplete="off">
+        </form>
+        <label for="chatWindow" class="mt-3 h2">Chat</label>
+        <div class="chat-window" id="chatWindow"></div>
+        <div class="input-group">
+            <input type="text" id="messageInput" class="form-control" placeholder="Your message" autocomplete="off">
+            <button id="sendBtn" class="btn btn-primary">Send</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
