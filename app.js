@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   const getWeather = async (location) => {
-      const response = await fetch(`/api/weather?location=${location}`);
+      const response = await fetch(`api/weather?location=${location}`);
       return response.json();
   }
 
